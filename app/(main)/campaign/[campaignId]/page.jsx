@@ -20,24 +20,24 @@ const CampaignDetails = ({ params }) => {
     });
     
     // Sample campaign data - replace with your actual data fetching
-    const campaign = {
-        id: params.id,
-        title: "Save the Local Animal Shelter",
-        description: "We're raising funds to support our local animal shelter. Your donations will help provide food, medical care, and shelter for abandoned animals. Every contribution makes a difference in the lives of these animals.\n\nOur shelter has been serving the community for over 10 years, and we've helped thousands of animals find their forever homes.",
-        image: "https://images.unsplash.com/photo-1415369629372-26f2fe60c467",
-        currentAmount: 15000,
-        goalAmount: 50000,
-        organizer: "John Smith",
-        category: "Animals",
-        createdAt: "2024-02-20",
-        recentDonations: [
-            { name: "Sarah Parker", amount: 100, timestamp: "2024-03-10T10:30:00Z" },
-            { name: "Anonymous", amount: 50, timestamp: "2024-03-09T15:45:00Z" },
-            { name: "Michael Chen", amount: 200, timestamp: "2024-03-09T09:20:00Z" },
-            { name: "Emma Wilson", amount: 75, timestamp: "2024-03-08T22:15:00Z" },
-            { name: "Anonymous", amount: 150, timestamp: "2024-03-08T14:30:00Z" },
-        ]
-    };
+    // const campaign = {
+    //     id: params.id,
+    //     title: "Save the Local Animal Shelter",
+    //     description: "We're raising funds to support our local animal shelter. Your donations will help provide food, medical care, and shelter for abandoned animals. Every contribution makes a difference in the lives of these animals.\n\nOur shelter has been serving the community for over 10 years, and we've helped thousands of animals find their forever homes.",
+    //     image: "https://images.unsplash.com/photo-1415369629372-26f2fe60c467",
+    //     currentAmount: 15000,
+    //     goalAmount: 50000,
+    //     organizer: "John Smith",
+    //     category: "Animals",
+    //     createdAt: "2024-02-20",
+    //     recentDonations: [
+    //         { name: "Sarah Parker", amount: 100, timestamp: "2024-03-10T10:30:00Z" },
+    //         { name: "Anonymous", amount: 50, timestamp: "2024-03-09T15:45:00Z" },
+    //         { name: "Michael Chen", amount: 200, timestamp: "2024-03-09T09:20:00Z" },
+    //         { name: "Emma Wilson", amount: 75, timestamp: "2024-03-08T22:15:00Z" },
+    //         { name: "Anonymous", amount: 150, timestamp: "2024-03-08T14:30:00Z" },
+    //     ]
+    // };
 
     const progress = (campaign.currentAmount / campaign.goalAmount) * 100;
 

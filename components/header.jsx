@@ -5,6 +5,9 @@ import React from 'react'
 import { Button } from './ui/button'
 import { usePathname, useRouter } from 'next/navigation'
 import { useAuth } from '@clerk/nextjs'
+import { WalletConnectButton, WalletModalProvider } from '@solana/wallet-adapter-react-ui'
+import '@solana/wallet-adapter-react-ui/styles.css';
+
 
 const Header = () => {
     const pathname = usePathname();
@@ -49,8 +52,14 @@ const Header = () => {
             </div>
 
             {/* Right section */}
-            <div>
-                <SignedOut>
+            <div className='flex  space-x-3'>
+                <div>
+                    <WalletModalProvider>
+                        <WalletConnectButton/>
+                    </WalletModalProvider>
+                </div>
+               <div>
+               <SignedOut>
                     <SignInButton mode="modal">
                         <Button>
                             Login
@@ -58,8 +67,9 @@ const Header = () => {
                     </SignInButton>
                 </SignedOut>
                 <SignedIn>
-                    <UserButton afterSignOutUrl="/"/>
+                    <UserButton />
                 </SignedIn>
+               </div>
             </div>
         </header>
     );

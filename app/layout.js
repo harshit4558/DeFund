@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "lucide-react";
 import Header from "@/components/header";
 
+
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -23,6 +25,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    
+        
     <ClerkProvider>
     <html lang="en">
       <body
@@ -34,5 +38,6 @@ export default function RootLayout({ children }) {
       </body>
     </html>
     </ClerkProvider>
+
   );
 }
